@@ -79,3 +79,58 @@ notif.remove();
 </div>
 </div>
 </section>
+
+// Auto Update Price Simulation (Randomized)
+function autoUpdatePrice() {
+const price = (2120 + Math.random() * 40).toFixed(2);
+document.getElementById('livePrice').innerText = price;
+
+
+const vol = (Math.random() * 100).toFixed(1) + "%";
+document.getElementById('volText').innerText = vol;
+
+
+generateSignal(price);
+}
+setInterval(autoUpdatePrice, 3000);
+
+
+// Generate Buy/Sell Signal Automatically
+function generateSignal(price) {
+const signalBox = document.getElementById('signalBox');
+let signal = "";
+
+
+if (price < 2130) {
+signal = "BUY — Harga memasuki area discount";
+signalBox.className = "dash-card green";
+showNotification("Signal Buy Terdeteksi: " + price);
+} else if (price > 2150) {
+signal = "SELL — Harga mendekati premium zone";
+signalBox.className = "dash-card red";
+showNotification("Signal Sell Terdeteksi: " + price);
+} else {
+signal = "Wait — Tidak ada sinyal kuat";
+signalBox.className = "dash-card";
+}
+
+
+document.getElementById('signalText').innerText = signal;
+}
+
+
+// Notification Popup
+function showNotification(msg) {
+const notif = document.createElement('div');
+notif.className = "notification";
+notif.innerText = msg;
+document.body.appendChild(notif);
+
+
+notif.style.display = "block";
+
+
+setTimeout(() => {
+notif.remove();
+}, 4000);
+}
