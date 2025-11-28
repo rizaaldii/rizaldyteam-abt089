@@ -1,0 +1,42 @@
+.dashboard {
+margin-top: 30px;
+}
+
+
+.dash-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+}
+
+
+.dash-card {
+background: #131728;
+padding: 20px;
+border-radius: 12px;
+border: 1px solid #252a45;
+box-shadow: 0 0 12px rgba(0,0,0,0.3);
+text-align: center;
+}
+
+
+#signalBox.green { border-left: 6px solid #21ff5c; }
+#signalBox.red { border-left: 6px solid #ff214e; }
+
+
+.notification {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #1b2036;
+padding: 15px 20px;
+border-radius: 10px;
+border: 1px solid #252a45;
+display: none;
+animation: fadein 0.3s;
+}
+
+
+@keyframes fadein {
+from { opacity: 0; transform: translateY(10px); }
+to { opacity: 1; transform: translateY(0); }
