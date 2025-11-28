@@ -1,63 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Traders ABT</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-    <header>
-        <div class="logo">Traders ABT</div>
-        <nav class="main-nav">
-            <a href="#technical">Teknikal</a>
-            <a href="#fundamental">Fundamental</a>
-            <a href="#method">Metode</a>
-        </nav>
-    </header>
+<main class="content-area">
 
-    <div class="layout">
-        <aside class="sidebar">
-            <h3>Menu</h3>
-            <ul>
-                <li><a href="#technical">Analisa Teknikal</a></li>
-                <li><a href="#fundamental">Analisa Fundamental</a></li>
-                <li><a href="#method">Metode Trading</a></li>
-            </ul>
-        </aside>
 
-        <main class="content-area">
-            <section id="technical" class="content-section">
-                <h2>Analisa Teknikal Hari Ini</h2>
-                <div id="technical-content" class="card"></div>
-            </section>
+<section class="dashboard">
+<h2>Dashboard Market</h2>
+<div class="dash-grid">
+<div class="dash-card" id="priceBox">
+<h3>XAU/USD Price</h3>
+<p id="livePrice">Loading...</p>
+</div>
+<div class="dash-card" id="signalBox">
+<h3>Sinyal Terbaru</h3>
+<p id="signalText">Menunggu data...</p>
+</div>
+<div class="dash-card" id="volBox">
+<h3>Volatilitas</h3>
+<p id="volText">-</p>
+</div>
+</div>
+</section>
 
-            <section id="fundamental" class="content-section">
-                <h2>Analisa Fundamental Hari Ini</h2>
-                <div id="fundamental-content" class="card"></div>
-            </section>
 
-            <section id="method" class="content-section">
-                <h2>Pilihan Metode Trading</h2>
-                <ul class="method-list">
-                    <li>Scalping</li>
-                    <li>Intraday</li>
-                    <li>Swing Trading</li>
-                    <li>Price Action</li>
-                </ul>
-            </section>
-        </main>
-    </div>
+<section id="technical" class="content-section">
+<h2>Analisa Teknikal Hari Ini</h2>
+<div id="technical-content" class="card"></div>
+</section>
 
-    <footer>
-        <p>© 2025 Traders ABT — Market Insight Platform</p>
-    </footer>
+
+<section id="fundamental" class="content-section">
+<h2>Analisa Fundamental Hari Ini</h2>
+<div id="fundamental-content" class="card"></div>
+</section>
+
+
+<section id="method" class="content-section">
+<h2>Pilihan Metode Trading</h2>
+<ul class="method-list">
+<li>Scalping</li>
+<li>Intraday</li>
+<li>Swing Trading</li>
+<li>Price Action</li>
+</ul>
+</section>
+
+
+<div class="tv-chart">
+<iframe src="https://s.tradingview.com/widgetembed/?symbol=XAUUSD&interval=60&theme=dark" width="100%" height="480" frameborder="0"></iframe>
+</div>
+
+
+</main>
+</div>
+
+
+<footer>
+<p>© 2025 Traders ABT — Market Insight Platform</p>
+</footer>
+
 
 <script src="app.js"></script>
-<!-- TradingView Widget -->
-<div class="tv-widget">
-    <iframe src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_123&symbol=XAUUSD&interval=60&hidesidetoolbar=1&symboledit=1&saveimage=0&toolbarbg=FFFFFF&studies=[]&theme=dark&style=1&timezone=Asia%2FJakarta&withdateranges=1&hideideas=1&studies_overrides={}&overrides={}" width="100%" height="480" frameborder="0"></iframe>
-</div>
+
 
 </body>
 </html>
